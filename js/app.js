@@ -69,7 +69,7 @@ function render() {
       render();
     }
     // create button
-    let button = document.createElement('button');
+    var button = document.createElement('button');
     // set a class to button
     button.classList.add('delete-btn');
     // set button content to x
@@ -97,17 +97,17 @@ function render() {
     return span;
   }
 
-  let div = document.getElementById('showTasks');
+  var div = document.getElementById('showTasks');
   div.innerHTML = '';
   //make a ul
-  let ul = document.createElement('ul');
+  var ul = document.createElement('ul');
 
   // make a bunch of li, the same length of the globalTasks
   for (var i = 0; i < globalTasks.length; i++) {
     var currentTask = globalTasks[i];
     // create the li
-    let li = document.createElement('li');
-    let button = createDeleteButton(i);
+    var li = document.createElement('li');
+    var button = createDeleteButton(i);
     // create span
     var span = createSpan(currentTask, i);
     // connecting li to button and span
